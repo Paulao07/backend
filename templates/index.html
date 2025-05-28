@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Loja de Sapatos - Bem-vindo</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles_index.css') }}">
+</head>
+<body>
+
+<header>
+  <h1>Loja de Sapatos</h1>
+  <nav>
+    <a href="#produtos">Produtos</a>
+    <a href="#contato">Contato</a>
+    <a href="#sobre">Sobre</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2>Encontre o sapato perfeito para você</h2>
+    <p>Conforto, estilo e qualidade para todos os momentos.</p>
+    <a href="#produtos" class="btn-shop">Comprar Agora</a>
+  </div>
+</section>
+
+<section class="container" id="produtos">
+  <h3 class="section-title">Destaques</h3>
+  <div class="product-grid">
+    <article class="product-card">
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80" alt="Tênis Esportivo" class="product-image" />
+      <div class="product-info">
+        <h4>Tênis Esportivo</h4>
+        <p>Leveza e conforto para suas corridas diárias.</p>
+        <div class="price-buy">
+          <span class="price">R$199,90</span>
+          <button class="btn-buy" aria-label="Comprar Tênis Esportivo">Comprar</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <img src="https://images.unsplash.com/photo-1528701800489-67463c37f7d9?auto=format&fit=crop&w=500&q=80" alt="Sapato Social Masculino" class="product-image" />
+      <div class="product-info">
+        <h4>Sapato Social Masculino</h4>
+        <p>Elegância e estilo para ocasiões especiais.</p>
+        <div class="price-buy">
+          <span class="price">R$299,90</span>
+          <button class="btn-buy" aria-label="Comprar Sapato Social Masculino">Comprar</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <img src="https://images.unsplash.com/photo-1585386959984-a415522a1e62?auto=format&fit=crop&w=500&q=80" alt="Sandália Feminina" class="product-image" />
+      <div class="product-info">
+        <h4>Sandália Feminina</h4>
+        <p>Conforto e estilo para os dias quentes.</p>
+        <div class="price-buy">
+          <span class="price">R$149,90</span>
+          <button class="btn-buy" aria-label="Comprar Sandália Feminina">Comprar</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <img src="https://images.unsplash.com/photo-1519744792095-2f2205e87b6f?auto=format&fit=crop&w=500&q=80" alt="Bota Casual" class="product-image" />
+      <div class="product-info">
+        <h4>Bota Casual</h4>
+        <p>Estilo urbano para o seu dia a dia.</p>
+        <div class="price-buy">
+          <span class="price">R$259,90</span>
+          <button class="btn-buy" aria-label="Comprar Bota Casual">Comprar</button>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<footer id="contato">
+  <p>Loja de Sapatos &copy; 2024 | Contato: contato@lojadesapatos.com | Telefone: (11) 1234-5678</p>
+  <p id="sobre">Nossa missão é oferecer os melhores calçados com qualidade e estilo para nossos clientes.</p>
+</footer>
+
+<script>
+  // Interação simples: alerta ao clicar em "Comprar"
+  document.querySelectorAll('.btn-buy').forEach(botao => {
+    botao.addEventListener('click', () => {
+      alert('Obrigado por escolher comprar conosco! Em breve, funcionalidade de carrinho estará disponível.');
+    });
+  });
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login - Loja de Sapatos</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles_login.css') }}">
+</head>
+<body>
+
+<h1>Faça seu login</h1>
+<form id="loginForm" novalidate>
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required autocomplete="email" />
+
+  <label for="senha">Senha</label>
+  <input type="password" id="senha" name="senha" placeholder="Sua senha" minlength="6" required />
+
+  <button type="submit">Entrar</button>
+</form>
+<div class="back-link">
+  <a href="javascript:history.back()">← Voltar para a página inicial</a>
+</div>
+
+<script>
+  const form = document.getElementById('loginForm');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    if (!form.checkValidity()) {
+      alert('Por favor, preencha todos os campos obrigatórios corretamente.');
+      return;
+    }
+
+    // Here you would normally handle login authentication
+    alert('Login efetuado com sucesso! Em breve, sistema de autenticação estará disponível.');
+    form.reset();
+  });
+</script>
+
+</body>
+</html>
